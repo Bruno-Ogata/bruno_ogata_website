@@ -15,7 +15,7 @@ hr {
     flex-direction: column;
     height: 100vh;
     background-color: #453f7a;
-    /* justify-content: center; */
+    justify-content: center;
     justify-content: space-around;
     align-items: center;
     padding-top: 10%;
@@ -49,11 +49,12 @@ p{
     flex-direction: column;
     height: 70vh;
     align-items: center;
-    /* justify-content: center; */
-    padding-top: 50px;
+    justify-content: flex-start;
+    /* padding-top: 50px; */
     gap: 30px;
-    padding-left: 300px;
-    padding-right: 300px;
+    /* padding-left: 50px; */
+    /* padding-right: 50px; */
+    padding: 60px;
 }
 
 .resume > img{
@@ -64,42 +65,32 @@ p{
 .projects-title{
     display: flex;
     justify-content: center;
+    padding-top: 60px;
 }
 
 .projects{
-    height: 80vh;
+    height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 1fr 100px; */
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px;
 }
 
 .projects > .item{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* max-height: 150px; */
+    max-height: 150px;
+    max-width: 500px;
     gap: 30px;
 }
 
 .projects > .item > img{
-    height: 100px;
-}
-
-#cpu{
-    grid-area: 1 / 2 / 2 / 5;
-}
-
-#neural-network{
-    grid-area: 2 / 2 / 3 / 5;
-}
-
-#compiler{
-    grid-area: 1 / 5 / 2 / 8;
-}
-
-#operational-system{
-    grid-area: 2 / 5 / 3 / 8;
+    height: 80px;
 }
 
 .projects > .item-description{
@@ -116,10 +107,8 @@ p{
     display: flex;
     height: 60vh;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding-left: 300px;
-    padding-right: 300px;
+    padding: 60px;
     gap: 20px;
 }
 
@@ -140,55 +129,66 @@ p{
 
 footer {
     width: 100%;
-    max-width: 1200px; /* Controla a largura máxima do conteúdo */
-    margin: 0 auto; /* Centraliza o conteúdo */
+    max-width: 1200px; 
+    margin: 0 auto; 
     color: black;
 }
 
 
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 480px) {
     .projects{
-        height: 100vh;
-        padding-top: 30px;
-        grid-template-columns: 20px 1fr 1fr 1fr 20px;
-        grid-template-rows: 100px 100px 100px 100px;
-        /* gap: 60px; */
+        height: 120vh;
+        /* padding-top: 30px; */
+        /* grid-template-columns: 20px 1fr 1fr 1fr 20px; */
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        padding: 20px;
+    }
+
+    .projects > .item > img{
+        height: 60px;
     }
 
     .resume{
-        padding-left: 60px;
-        padding-right: 60px;
+        padding-left: 40px;
+        padding-right: 40px;
+        height: 60vh;
+    }
+
+    .resume > img{
+        border-radius: 50%;
+        height: 100px;
     }
 
     .contact{
-        padding-left: 60px;
-        padding-right: 60px;
+        padding-left: 40px;
+        padding-right: 40px;
+        height: 60vh;
     }
 
-    #cpu{
-        grid-row: 1;
-        grid-column: 2 / 5;
+    .hero > h1{
+        font-size: 2.5rem;
+    }
+
+    .hero > #controler{
+        height: 150px;
+    }
+
+    .hero > #start{
+        width: 150px;
     }
     
-    #neural-network{
-        grid-row: 2;
-        grid-column: 2 / 5;
+    h2{
+        font-size: 1.3rem;
     }
     
-    #compiler{
-        grid-row: 3;
-        grid-column: 2 / 5;
-    }
-    
-    #operational-system{
-        grid-row: 4;
-        grid-column: 2 / 5;
+    h3{
+        font-size: 1rem;
     }
 
     
     p{
-        font-family: "Inria Serif", serif;
-        /* font-size: 0.9rem; */
+        font-size: 0.9rem;
     }
 }
